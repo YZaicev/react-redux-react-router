@@ -20,5 +20,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/ui/*.css
-/src/Containers/*.css
+/src/ui/**/*.css
+/src/Containers/**/*.css
+
+yarn.lock
