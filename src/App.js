@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import { Route } from 'react-router-dom';
@@ -14,8 +14,10 @@ const store = createStore(
         ...rootReducers,
         router: routerReducer
     }),
-    applyMiddleware(routerMiddleware(history)),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    compose(
+        applyMiddleware(routerMiddleware(history)),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    ),
 );
 
 const RouteWithSubRoutes = (route) => (
