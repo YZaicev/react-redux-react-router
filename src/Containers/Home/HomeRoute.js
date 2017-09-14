@@ -1,6 +1,6 @@
-import HomeContainer from './HomeContainer'
+import HomeContainer from './HomeContainer';
 
 export default (store) => ({
-  path: '/',
-  component: HomeContainer
-})
+    path: '/',
+    component: HomeContainer,
+});

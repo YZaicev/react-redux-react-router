@@ -1,4 +1,4 @@
-import HomeReducer from './Containers/Home/HomeReducer'
+import HomeReducer from './Containers/Home/HomeReducer';
 
 // export const injectReducer = (store, { key, reducer }) => {
 //   if (Object.hasOwnProperty.call(store.asyncReducers, key)) return
@@ -8,5 +8,5 @@ import HomeReducer from './Containers/Home/HomeReducer'
 // }
 
 export default {
-    home: HomeReducer
-}
+    home: HomeReducer,
+};
